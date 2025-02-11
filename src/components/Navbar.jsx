@@ -1,37 +1,30 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
-import "./Navbar.css";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState("home");
+  const [activeSection, setActiveSection] = useState("home");
+
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(id);
+    }
+  };
 
   return (
     <nav className="navbar">
-      <div className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
-        ☰
-      </div>
-      <ul className={isOpen ? "nav-links open" : "nav-links"}>
-        <li>
-          <Link to="home" smooth={true} duration={500} onClick={() => setIsOpen(false)}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="projects" smooth={true} duration={500} onClick={() => setIsOpen(false)}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link to="resume" smooth={true} duration={500} onClick={() => setIsOpen(false)}>
-            Resume
-          </Link>
-        </li>
-        <li>
-          <Link to="contact" smooth={true} duration={500} onClick={() => setIsOpen(false)}>
-            Contact
-          </Link>
-        </li>
+      <ul>
+        {["home", "projects", "resume", "contact"].map((section) => (
+          <li key={section}>
+            <button
+              className={activeSection === section ? "active" : ""}
+              onClick={() => handleScroll(section)}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </button>
+          </li>
+        ))}
       </ul>
     </nav>
   );

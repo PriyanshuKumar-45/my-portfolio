@@ -1,24 +1,25 @@
-.resume-section {
+.home {
+  text-align: center;
   padding: 80px 20px;
   background-color: #121212;
-  color: #ffffff;
-  text-align: center;
+  color: white;
 }
 
-.resume-container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: #1e1e1e;
-  padding: 40px;
-  border-radius: 8px;
+.home h1 {
+  font-size: 2.5em;
 }
 
-.resume-container h2 {
+.home h1 span {
   color: #ffcc00;
 }
 
-.download-button {
-  background-color: #ffcc00;
+.home h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.btn {
+  background: #ffcc00;
   color: #121212;
   padding: 12px 25px;
   border-radius: 5px;
@@ -30,11 +31,15 @@
 
 /* Mobile View */
 @media (max-width: 768px) {
-  .resume-container {
-    padding: 20px;
+  .home h1 {
+    font-size: 2em;
   }
 
-  .download-button {
+  .home h2 {
+    font-size: 1.2em;
+  }
+
+  .btn {
     font-size: 1em;
     padding: 10px 20px;
   }

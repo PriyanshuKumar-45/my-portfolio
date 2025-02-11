@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "./Home.css";
+import {ReactTyped} from "react-typed";
+import "../styles/Home.css";
 
 const Home = () => {
   return (
-    <motion.div 
+    <motion.div
       className="home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -17,16 +18,25 @@ const Home = () => {
       >
         Hi, I'm <span>Priyanshu Kumar</span>
       </motion.h1>
-      <motion.p
+      <motion.h2
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        I am a passionate Web Developer 🚀
-      </motion.p>
-      <motion.a 
-        href="/resume.pdf" 
-        download 
+        <ReactTyped
+          strings={[
+            "A Passionate Web Developer 🚀",
+            "Building Responsive & Interactive Websites",
+            "Creating Stunning UI/UX Experiences"
+          ]}
+          typeSpeed={50}
+          backSpeed={30}
+          loop
+        />
+      </motion.h2>
+      <motion.a
+        href="/resume.pdf"
+        download
         className="btn"
         whileHover={{ scale: 1.1 }}
       >
