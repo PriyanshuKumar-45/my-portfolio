@@ -14,9 +14,8 @@ const Resume = () => {
         <h2>My Resume</h2>
         <p>Download my resume to see my skills and experience.</p>
         <motion.a
-          href="https://drive.google.com/file/d/1lPOBUCXT9RetuulWxTIQ6OkOiyUasP4w/view?usp=drivesdk"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/PriyanshuResume2025.pdf" 
+          download="PriyanshuResume2025.pdf"
           className="download-button"
           whileHover={{ scale: 1.1 }}
         >

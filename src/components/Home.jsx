@@ -34,14 +34,7 @@ const Home = () => {
           loop
         />
       </motion.h2>
-      <motion.a
-        href="/resume.pdf"
-        download
-        className="btn"
-        whileHover={{ scale: 1.1 }}
-      >
-        Download Resume
-      </motion.a>
+      
     </motion.div>
   );
 };

@@ -16,10 +16,10 @@ const projects = [
     tech: ["React", "Next.js", "Firebase"],
   },
   {
-    title: "Video Chat App",
-    description: " Github Repository Link. Real-time video chat app using WebRTC & Socket.io.",
-    link: "https://github.com/PriyanshuKumar-45/vChatBackend.git",
-    tech: ["React", "WebRTC", "Socket.io"],
+    title: "Portfolio Website",
+    description: " Build a Portfolio to showcase my skills & work",
+    link: "",
+    tech: ["React"],
   },
 ];
 
